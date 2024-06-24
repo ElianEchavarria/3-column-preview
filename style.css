@@ -1,0 +1,131 @@
+* { 
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: inherit;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 6.25rem;
+  overflow: hidden; 
+}
+
+.main-container {
+  background-color: white;
+  border-radius: 0.3rem;
+  overflow: hidden; 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.sedans-container, .suvs-container, .luxury-container {
+  padding: 3.125rem;
+}
+
+.sedans-container {
+  background-color: #e38826;
+}
+
+.suvs-container {
+  background-color: #006970;
+}
+
+.luxury-container {
+  background-color: #004241;
+}
+
+.icon {
+  height: 1.875rem;
+  margin-bottom: 1.375rem;
+}
+
+.title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.375rem;
+  color: white;
+}
+
+.car-description {
+  width: 169px;
+  line-height: 1.438rem;
+  font-size: 0.75rem;
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 4.375rem;
+}
+
+button {
+  font-size: 0.75rem;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #f2f2f2;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.15s, border 0.15s, color 0.15s;
+}
+
+.sedans-container button {
+  color: #e38826;
+}
+
+.suvs-container button {
+  color: #006970;
+}
+
+.luxury-container button {
+  color: #004241;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    height: auto;
+    padding: 2rem 1rem;
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+
+  .main-container {
+    width: 90%; 
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    overflow: hidden;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sedans-container, .suvs-container, .luxury-container {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .car-description {
+    width: 100%; 
+  }
+}
+
